@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="toolbarStyle">@style/Widget.Event.Toolbar</item>
+        <item name="android:ratingBarStyle">@style/RatingBar</item>
+    </style>
+
+    <style name="Widget.Event.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/TextAppearance.GyG.Toolbar</item>
+        <item name="titleTextColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.GyG.Toolbar" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/toolbar_text_size</item>
+    </style>
+
+    <style name="RatingBar" parent="@style/Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@color/ratingActive</item>
+        <item name="colorControlActivated">@color/ratingActive</item>
+    </style>
+
+</resources>
