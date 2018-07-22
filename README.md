@@ -77,11 +77,10 @@ and when there is a new entry (we might check internet connection before) we wou
 If we have a success result, the data is removed from the table, if not, we left it there in case to retry again later (depending on the requirements).
 
 The payload it's similar to review's structure:
-
 ``
 @Entity
 data class NewReview(@PrimaryKey val uiId: Int, val userId: Int, val rating: String, val title: String, val message: String, val foreignLanguage: Boolean, val date: String)
-
+``
 {
     uiId: Int,
     rating: String,
@@ -90,7 +89,6 @@ data class NewReview(@PrimaryKey val uiId: Int, val userId: Int, val rating: Str
     foreignLanguage: Boolean,
     date: String
 }
-``
 
 Other attributes such as reviewerName, reviewerCountry, author are not necessary because we are provinding the user's id (assuming we are authenticated).
 
