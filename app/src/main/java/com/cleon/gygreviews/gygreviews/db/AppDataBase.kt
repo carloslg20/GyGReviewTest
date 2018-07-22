@@ -4,10 +4,11 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.cleon.gygreviews.gygreviews.model.NewReview
 import com.cleon.gygreviews.gygreviews.model.Review
 
 
-@Database(entities = [(Review::class)], version = 2)
+@Database(entities = [(Review::class), (NewReview::class)], version = 1)
 abstract class AppDataBase : RoomDatabase() {
 
     abstract fun reviewDataDao(): ReviewDao

@@ -11,9 +11,8 @@ data class Review(@PrimaryKey
                   val languageCode: String, @SerializedName("traveler_type")val travelerType: String,
                   val reviewerName: String, val reviewerCountry: String)
 @Entity
-data class NewReview(@PrimaryKey val uiId: Int, val rating: String, val title: String, val message: String,
-                  val author: String, val foreignLanguage: Boolean, val date: String,
-                  val languageCode: String, val travelerType: String, val reviewerName: String, val reviewerCountry: String)
+data class NewReview(@PrimaryKey val uiId: Int, val userId: Int, val rating: String, val title: String, val message: String,
+                  val foreignLanguage: Boolean, val date: String)
 
 data class NewReviewResponse(val status: Boolean)
 
